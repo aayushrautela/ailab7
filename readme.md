@@ -1,79 +1,85 @@
-# Prolog: Convert Words to Numbers (Variant 4)
+# Prolog: Turning Number Words into Digits!
 
-This Prolog program converts English words representing a number (up to "one thousand") into its numerical digit form. For example, it converts "one hundred and twenty three" to `123`.
+Ever wanted to tell your computer "one hundred and twenty three" and have it understand `123`? This little Prolog program does just that for numbers up to "one thousand"!
 
-## Prerequisites
+## What You'll Need
 
-* **SWI-Prolog:** You need to have SWI-Prolog installed on your system. You can download it from [https://www.swi-prolog.org/](https://www.swi-prolog.org/).
+* **SWI-Prolog:** This is the magic engine that runs our Prolog code. If you don't have it, you can grab it for free from [https://www.swi-prolog.org/](https://www.swi-prolog.org/).
+* **Git:** You'll need Git installed to download the code from the repository. If you don't have it, you can get it from [https://git-scm.com/downloads](https://git-scm.com/downloads).
 
-## How to Run
+## Let's Get It Running!
 
-1.  **Save the Code:**
-    * Save the Prolog code (provided for Variant 4) into a file named `variant4.pl` (or any other name with a `.pl` extension).
+Here's how you can try it out:
 
-2.  **Open SWI-Prolog:**
-    * Open your system's terminal or command prompt.
-    * Start SWI-Prolog by typing `swipl` and pressing Enter.
+1.  **Get the Code (Clone the Repository):**
+    * Open your computer's command line or terminal.
+    * Navigate to the directory where you want to download the code.
+    * Use the `git clone` command to copy the project files to your computer:
+        ```bash
+        git clone [https://github.com/aayushrautela/ailab7](https://github.com/aayushrautela/ailab7)
+        ```
+    * This will create a folder named `ailab7` containing the code. Navigate into this folder:
+        ```bash
+        cd ailab7
+        ```
+
+2.  **Wake Up SWI-Prolog:**
+    * While you're inside the `ailab7` project folder, type `swipl` in your terminal and hit Enter.
         ```bash
         swipl
         ```
-    * You should see the SWI-Prolog welcome message and prompt: `?-`
+    * You should see a welcome message from SWI-Prolog and its special prompt: `?-` (This means it's ready for your commands!)
 
-3.  **Navigate to Directory (if needed):**
-    * If you didn't start SWI-Prolog from the directory where you saved `variant4.pl`, you'll need to navigate to it. Use the `working_directory/2` predicate. For example, if your file is in `C:\my_prolog_files` on Windows or `/home/user/prolog_files` on Linux:
-        ```prolog
-        ?- working_directory(_, 'C:/my_prolog_files'). % Windows (use forward slashes)
-        % or
-        ?- working_directory(_, '/home/user/prolog_files'). % Linux/macOS
-        ```
-
-4.  **Consult (Load) the File:**
-    * At the Prolog prompt (`?-`), load your Prolog file using the `consult/1` predicate. Make sure to include the single quotes around the filename and the period at the end:
+3.  **Load Your Code (Consulting):**
+    * Now, at the `?-` prompt, tell Prolog to read the `variant4.pl` file.
+    * Type this, making sure to use single quotes around the filename and a period at the end:
         ```prolog
         ?- consult('variant4.pl').
         ```
-    * If successful, Prolog will typically respond with `true.` or show the compilation time.
+    * If everything goes well, Prolog will usually say `true.` or show how long it took to load.
 
-5.  **Run Queries:**
-    * Once the file is loaded, you can query the `to_num/2` predicate.
-    * The first argument is the number in words (as a string in double quotes).
-    * The second argument is a variable (starting with an uppercase letter) that will hold the numerical result.
-    * **Examples:**
+4.  **Ask Away! (Running Queries):**
+    * Great! Your code is loaded. Now you can ask it to convert words to numbers.
+    * You'll use the `to_num/2` command.
+        * The first part is the number in words (put it in double quotes `"`).
+        * The second part is a placeholder (a variable, which in Prolog starts with a capital letter like `N` or `Result`) where Prolog will put the answer.
+    * **Try these examples:**
         ```prolog
         ?- to_num("ninety nine", N).
         ```
-        Expected output: `N = 99.`
+        Prolog should tell you: `N = 99.`
 
         ```prolog
         ?- to_num("one hundred and one", Result).
         ```
-        Expected output: `Result = 101.`
+        And you'll see: `Result = 101.`
 
         ```prolog
         ?- to_num("five hundred and forty eight", Value).
         ```
-        Expected output: `Value = 548.`
+        You should get: `Value = 548.`
 
         ```prolog
         ?- to_num("one thousand", X).
         ```
-        Expected output: `X = 1000.`
+        The answer: `X = 1000.`
 
-6.  **Exiting SWI-Prolog:**
-    * To exit SWI-Prolog, type `halt.` at the prompt:
+5.  **All Done? Saying Goodbye to SWI-Prolog:**
+    * When you're finished, you can close SWI-Prolog by typing `halt.` at the prompt:
         ```prolog
         ?- halt.
         ```
 
-## Using with VS Code (Recommended for Development)
+## Prefer VS Code? Here's a Tip!
 
-1.  **Install SWI-Prolog.**
-2.  **Install a Prolog Extension in VS Code:**
-    * Search for and install an extension like "VSC-Prolog" by Arthur Wang from the VS Code marketplace.
-3.  **Open your `.pl` file in VS Code.**
-4.  **Load the Document:**
-    * Use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and type `Prolog: load document`.
-5.  **Query:**
-    * A Prolog terminal should open within VS Code (usually in the "TERMINAL" or "OUTPUT" panel) showing the `?-` prompt.
-    * Enter your queries directly there as shown in step 5 above.
+If you like using Visual Studio Code for your coding:
 
+1.  Make sure **SWI-Prolog** and **Git** are installed (from the steps above).
+2.  **Clone the repository** as described in Step 1 of "Let's Get It Running!".
+3.  Open the cloned `ailab7` folder in VS Code.
+4.  In VS Code, go to Extensions and search for a **Prolog extension**. "VSC-Prolog" by Arthur Wang is a popular choice. Install it if you haven't already.
+5.  Open the `variant4.pl` file from the `ailab7` folder.
+6.  Use the **Command Palette** (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and find a command like `Prolog: load document`. This will load your file.
+7.  A **Prolog terminal** should pop up inside VS Code (look in the "TERMINAL" or "OUTPUT" panel). You'll see the `?-` prompt there, and you can type your queries just like in step 4 above!
+
+Happy converting!
