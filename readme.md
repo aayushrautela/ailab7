@@ -70,16 +70,16 @@ Here's how you can try it out:
         ?- halt.
         ```
 
-## Prefer VS Code? Here's a Tip!
+## For VS code fans!
 
 If you like using Visual Studio Code for your coding:
 
-1.  Make sure **SWI-Prolog** and **Git** are installed (from the steps above).
-2.  **Clone the repository** as described in Step 1 of "Let's Get It Running!".
+1.  Make sure **SWI-Prolog** and **Git** are installed.
+2.  **Clone the repository** as described in Step 1.
 3.  Open the cloned `ailab7` folder in VS Code.
 4.  In VS Code, go to Extensions and search for a **Prolog extension**. "VSC-Prolog" by Arthur Wang is a popular choice. Install it if you haven't already.
 5.  Open the `variant4.pl` file from the `ailab7` folder.
-6.  Use the **Command Palette** (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and find a command like `Prolog: load document`. This will load your file.
+6.  Use the **Command Palette** (`Ctrl+Shift+P` on Linux) and find a command like `Prolog: load document`. This will load your file.
 7.  A **Prolog terminal** should pop up inside VS Code (look in the "TERMINAL" or "OUTPUT" panel). You'll see the `?-` prompt there, and you can type your queries just like in step 4 above!
 
 Happy converting!
