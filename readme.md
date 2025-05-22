@@ -16,7 +16,7 @@ Here's how you can try it out:
     * Navigate to the directory where you want to download the code.
     * Use the `git clone` command to copy the project files to your computer:
         ```bash
-        git clone [https://github.com/aayushrautela/ailab7](https://github.com/aayushrautela/ailab7)
+        git clone https://github.com/aayushrautela/ailab7.git
         ```
     * This will create a folder named `ailab7` containing the code. Navigate into this folder:
         ```bash
